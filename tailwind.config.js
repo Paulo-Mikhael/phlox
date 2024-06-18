@@ -14,7 +14,9 @@ export default {
       },
       colors: {
         "gray-gradient-1": "#DCDCDC",
-        "gray-gradient-2": "#EEEEEE"
+        "gray-gradient-2": "#EEEEEE",
+        "red-main": "#FB2A36",
+        "red-main-hover": "#BF1721"
       },
       fontSize: {
         "3xl": "3rem",
