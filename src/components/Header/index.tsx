@@ -1,3 +1,4 @@
+import Picture from "../Picture";
 import { 
   twHeaderIconsStyles, 
   twHeaderStyles, 
@@ -10,7 +11,7 @@ export default function Header(){
   return (
     <header className={twHeaderStyles}>
       <nav className={twNavStyles}>
-        <img 
+        <Picture 
           src="icons/logo.png" 
           title="Logo" 
           alt="logo da empresa" 
@@ -36,13 +37,13 @@ export default function Header(){
         <p className="cursor-pointer font-bold">
           login
         </p>
-        <img 
+        <Picture 
           src="icons/lupa.png" 
           title="lupa" 
           alt="lupa para pesquisa" 
           className="w-6 h-6 cursor-pointer"
         />
-        <img 
+        <Picture 
           src="icons/shop-bag.png" 
           title="Shop Bag" 
           alt="imagem de sacola representando as compras salvas do usuário" 
