@@ -1,30 +1,38 @@
+import { 
+  twHeaderIconsStyles, 
+  twHeaderStyles, 
+  twNavItemSelectedStyles, 
+  twNavItemStyles, 
+  twNavStyles 
+} from "./styles";
+
 export default function Header(){
   return (
-    <header className="w-full text-xl flex justify-between">
-      <nav className="flex justify-between items-center w-header-nav">
+    <header className={twHeaderStyles}>
+      <nav className={twNavStyles}>
         <img 
           src="icons/logo.png" 
           title="Logo" 
           alt="logo da empresa" 
           className="w-36 h-5 cursor-pointer"
         />
-        <h2 className="font-medium cursor-pointer">
+        <h2 className={twNavItemSelectedStyles}>
           Home
         </h2>
-        <h2 className="italic text-gray-800 cursor-pointer">
+        <h2 className={twNavItemStyles}>
           Shop
         </h2>
-        <h2 className="italic text-gray-800 cursor-pointer">
+        <h2 className={twNavItemStyles}>
           About us
         </h2>
-        <h2 className="italic text-gray-800 cursor-pointer">
+        <h2 className={twNavItemStyles}>
           Blog
         </h2>
-        <h2 className="italic text-gray-800 cursor-pointer">
+        <h2 className={twNavItemStyles}>
           Contact Us
         </h2>
       </nav>
-      <div className="flex gap-8 items-center justify-center">
+      <div className={twHeaderIconsStyles}>
         <p className="cursor-pointer font-bold">
           login
         </p>

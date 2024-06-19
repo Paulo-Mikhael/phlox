@@ -1,19 +1,26 @@
 import Button from "../../components/Button";
 import Header from "../../components/Header";
+import { 
+  twHomeContainerStyles, 
+  twMainHomeContentStyles, 
+  twMainHomeTextStyles, 
+  twPBoldSubtitleStyles, 
+  twPSubtitleStyles
+} from "./styles";
 
 export default function Home() {
   return (
     <section className="p-8">
       <Header />
-      <div className="w-full h-home bg-gradient-to-r from-gray-gradient-1 to-80% to-gray-gradient-2 mt-7 rounded-xl flex items-end justify-start">
-        <article className="ml-20 w-11/12 flex flex-col">
-          <p className="font-medium text-lg absolute top-absolute-1 z-10">
+      <div className={twHomeContainerStyles}>
+        <article className={twMainHomeContentStyles}>
+          <p className={twPSubtitleStyles}>
             Beats Solo
           </p>
-          <p className="font-bold text-3xl absolute top-absolute-2 z-10">
+          <p className={twPBoldSubtitleStyles}>
             Wireless
           </p>
-          <p className="text-white font-bold text-4xl absolute top-absolute-3 z-10">
+          <p className={twMainHomeTextStyles}>
             HEADPHONES
           </p>
           <img
