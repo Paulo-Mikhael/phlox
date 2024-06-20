@@ -1,5 +1,4 @@
 const twCardContainerClasses: string[] = [
-  "w-80",
   "h-80",
   "rounded-lg",
   "relative"
@@ -26,8 +25,6 @@ export const twCardMainPStyles = twCardMainPClasses.join(" ");
 const twCardImageClasses: string[] = [
   "absolute",
   "w-52",
-  "right-0",
-  "bottom-0",
-  "z-0"
+  "z-0",
 ]
 export const twCardImageStyles = twCardImageClasses.join(" ");

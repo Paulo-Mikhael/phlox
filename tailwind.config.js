@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       width: {
-        "header-nav": "50pc"
+        "header-nav": "50pc",
+        "big-card": "514px"
       },
       height: {
         "home": "33pc"

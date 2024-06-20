@@ -1,3 +1,4 @@
+import { ICard } from "../../interfaces";
 import { twPBoldSubtitleStyles, twPSubtitleStyles } from "../../util";
 import Button from "../Button";
 import Picture from "../Picture";
@@ -8,29 +9,14 @@ import {
   twCardMainPStyles 
 } from "./styles";
 
-interface Props{
-  cardBackground: string,
-  imageSrc: string,
-  imageAlt?: string,
-  imageTitle?: string,
-  subtitleP: string,
-  subtitlePColor?: string,
-  boldSubtitleP: string,
-  boldSubtitlePColor?: string,
-  mainP: string,
-  mainPColor: string,
-  whiteButton?: boolean,
-  bigCard?: boolean
-}
-
 export default function Card({ 
   cardBackground, imageSrc, imageAlt, imageTitle, subtitleP, boldSubtitleP, mainP, subtitlePColor, 
-  boldSubtitlePColor, mainPColor, whiteButton = false
-}: Props){
+  boldSubtitlePColor, mainPColor, whiteButton = false, bigCard, whiteButtonTextColor, customImageStyles
+}: ICard){
   return (
-    <div className={`${twCardContainerStyles} bg-${cardBackground}`}>
+    <div className={`${twCardContainerStyles} ${cardBackground} ${bigCard === true ? "w-big-card" : "w-80"}`}>
       <Picture 
-        className={twCardImageStyles} 
+        className={`${twCardImageStyles} ${bigCard === true ? "right-5 top-0" : "right-0 bottom-0"} ${customImageStyles}`} 
         src={imageSrc} 
         alt={imageAlt ? imageAlt : undefined}
         title={imageTitle ? imageTitle : undefined}
@@ -42,14 +28,15 @@ export default function Card({
         <p className={`${twPBoldSubtitleStyles} ${boldSubtitlePColor ? boldSubtitlePColor : "text-white"}`}>
           {boldSubtitleP}
         </p>
-        <p className={`${twCardMainPStyles} text-${mainPColor}`}>
+        <p className={`${twCardMainPStyles} ${mainPColor}`}>
           {mainP}
         </p>
         <Button 
           width="w-24" 
           padding="p-2" 
+          color={`${whiteButton === true ? whiteButtonTextColor : "text-white"}`}
           className=
-            {`z-10 ${whiteButton === true ? `bg-white text-${cardBackground} hover:bg-slate-200` : ""}`}
+            {`z-10 ${whiteButton === true ? `bg-white hover:bg-slate-200` : ""}`}
         >
           See More
         </Button>
