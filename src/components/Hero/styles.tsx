@@ -21,24 +21,6 @@ const twMainHomeContentClasses: string[] = [
 ]
 export const twMainHomeContentStyles = twMainHomeContentClasses.join(" ");
 
-const twPSubtitleClasses: string[] = [
-  "font-medium",
-  "text-lg",
-  "absolute",
-  "top-absolute-1",
-  "z-10"
-]
-export const twPSubtitleStyles = twPSubtitleClasses.join(" ");
-
-const twPBoldSubtitleClasses: string[] = [
-  "font-bold",
-  "text-3xl",
-  "absolute",
-  "top-absolute-2",
-  "z-10"
-]
-export const twPBoldSubtitleStyles = twPBoldSubtitleClasses.join(" ");
-
 const twMainHomeTextClasses: string[] = [
   "text-white",
   "font-bold",

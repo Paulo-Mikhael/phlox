@@ -4,18 +4,17 @@ import {
   twHomeContainerStyles, 
   twMainHomeContentStyles, 
   twMainHomeTextStyles, 
-  twPBoldSubtitleStyles, 
-  twPSubtitleStyles
 } from "./styles";
+import { twPSubtitleStyles, twPBoldSubtitleStyles } from "../../util";
 
 export default function Hero(){
   return (
     <div className={twHomeContainerStyles}>
     <article className={twMainHomeContentStyles}>
-      <p className={twPSubtitleStyles}>
+      <p className={`${twPSubtitleStyles} absolute top-absolute-1 z-10`}>
         Beats Solo
       </p>
-      <p className={twPBoldSubtitleStyles}>
+      <p className={`${twPBoldSubtitleStyles} absolute top-absolute-2 z-10`}>
         Wireless
       </p>
       <p className={twMainHomeTextStyles}>
