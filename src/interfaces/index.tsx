@@ -12,5 +12,6 @@ export interface ICard{
   whiteButton?: boolean,
   bigCard?: boolean,
   whiteButtonTextColor?: string,
-  customImageStyles?: string
+  customImageStyles?: string,
+  customImageWidth?: string
 }

@@ -24,7 +24,6 @@ export const twCardMainPStyles = twCardMainPClasses.join(" ");
 
 const twCardImageClasses: string[] = [
   "absolute",
-  "w-52",
   "z-0",
 ]
 export const twCardImageStyles = twCardImageClasses.join(" ");

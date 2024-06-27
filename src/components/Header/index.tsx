@@ -13,9 +13,10 @@ export default function Header(){
       <nav className={twNavStyles}>
         <Picture 
           src="icons/logo.png" 
-          title="Logo" 
+          title="Logo PHLOX" 
           alt="logo da empresa" 
-          className="w-36 h-5 cursor-pointer"
+          width="w-36"
+          className="h-5 cursor-pointer"
         />
         <h2 className={twNavItemSelectedStyles}>
           Home
@@ -41,13 +42,13 @@ export default function Header(){
           src="icons/lupa.png" 
           title="lupa" 
           alt="lupa para pesquisa" 
-          className="w-6 h-6 cursor-pointer"
+          className="h-6 cursor-pointer"
         />
         <Picture 
           src="icons/shop-bag.png" 
-          title="Shop Bag" 
+          title="Minhas Compras" 
           alt="imagem de sacola representando as compras salvas do usuário" 
-          className="w-6 h-6 cursor-pointer"
+          className="h-6 cursor-pointer"
         />
       </div>
     </header>

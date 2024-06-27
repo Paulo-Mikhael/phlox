@@ -24,7 +24,8 @@ export default function Hero(){
         src="images/headphone-draw.png"
         title="Headphone"
         alt="Desenho de um headphone"
-        className="w-80 absolute right-60 z-0 top-40"
+        width="w-80"
+        className="absolute right-60 z-0 top-40"
       />
       <div className="mb-10">
         <Button width="w-48">
