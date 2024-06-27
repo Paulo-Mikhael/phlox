@@ -9,7 +9,8 @@ const twHomeContainerClasses: string[] = [
   "rounded-xl",
   "flex",
   "items-end",
-  "justify-start"
+  "justify-start",
+  "relative"
 ]
 export const twHomeContainerStyles = twHomeContainerClasses.join(" ");
 
@@ -17,7 +18,7 @@ const twMainHomeContentClasses: string[] = [
   "ml-20",
   "w-11/12",
   "flex",
-  "flex-col"
+  "flex-col",
 ]
 export const twMainHomeContentStyles = twMainHomeContentClasses.join(" ");
 
@@ -26,7 +27,6 @@ const twMainHomeTextClasses: string[] = [
   "font-bold",
   "text-4xl",
   "absolute",
-  "top-absolute-3",
   "z-10"
 ]
 export const twMainHomeTextStyles = twMainHomeTextClasses.join(" ");

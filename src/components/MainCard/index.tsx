@@ -1,4 +1,4 @@
-import { ICard } from "../../interfaces";
+import { IMainCard } from "../../interfaces";
 import { twPBoldSubtitleStyles, twPSubtitleStyles } from "../../util";
 import Button from "../Button";
 import Picture from "../Picture";
@@ -9,10 +9,10 @@ import {
   twCardMainPStyles 
 } from "./styles";
 
-export default function Card({ 
+export default function MainCard({ 
   cardBackground, imageSrc, imageAlt, imageTitle, subtitleP, boldSubtitleP, mainP, subtitlePColor, 
   boldSubtitlePColor, mainPColor, whiteButton = false, bigCard, whiteButtonTextColor, customImageStyles, customImageWidth
-}: ICard){
+}: IMainCard){
   return (
     <div className={`${twCardContainerStyles} ${cardBackground} ${bigCard === true ? "w-big-card" : "w-80"}`}>
       <Picture 

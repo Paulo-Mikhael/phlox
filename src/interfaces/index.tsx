@@ -1,4 +1,4 @@
-export interface ICard{
+export interface IMainCard{
   cardBackground: string,
   imageSrc: string,
   imageAlt?: string,

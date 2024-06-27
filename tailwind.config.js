@@ -34,11 +34,6 @@ export default {
       fontSize: {
         "3xl": "3rem",
         "4xl": "10rem"
-      },
-      spacing: {
-        "absolute-1": "16pc",
-        "absolute-2": "17pc",
-        "absolute-3": "17pc"
       }
     },
   },

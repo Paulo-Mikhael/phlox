@@ -11,13 +11,13 @@ export default function Hero(){
   return (
     <div className={twHomeContainerStyles}>
     <article className={twMainHomeContentStyles}>
-      <p className={`${twPSubtitleStyles} absolute top-absolute-1 z-10`}>
+      <p className={`${twPSubtitleStyles} absolute top-[10pc] z-10`}>
         Beats Solo
       </p>
-      <p className={`${twPBoldSubtitleStyles} absolute top-absolute-2 z-10`}>
+      <p className={`${twPBoldSubtitleStyles} absolute top-[11pc] z-10`}>
         Wireless
       </p>
-      <p className={twMainHomeTextStyles}>
+      <p className={`${twMainHomeTextStyles} top-[11pc] left-[4.5pc]`}>
         HEADPHONES
       </p>
       <Picture
@@ -25,7 +25,7 @@ export default function Hero(){
         title="Headphone"
         alt="Desenho de um headphone"
         width="w-80"
-        className="absolute right-60 z-0 top-40"
+        className="absolute right-56 z-0 top-[4pc]"
       />
       <div className="mb-10">
         <Button width="w-48">
