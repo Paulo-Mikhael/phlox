@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Picture from "../Picture";
-import { news1 } from "../../data/News";
+import { DataNews } from "../../data/News";
 
 const StyledDiv = styled.div`
   display: flex;
@@ -34,9 +34,9 @@ export default function News() {
       <h4 className="text-[20px] mb-[25px]">
         There are many variations passages
       </h4>
-      <div className="w-full flex justify-between">
-        {news1.map(newsItem => (
-          <StyledDiv>
+      <div className="w-full flex justify-evenly">
+        {DataNews.map(newsItem => (
+          <StyledDiv key={newsItem.id}>
             <Picture
               src={newsItem.imageUrl}
               alt={newsItem.imageAlt ? newsItem.imageAlt : newsItem.imageUrl}

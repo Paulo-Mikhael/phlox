@@ -1,4 +1,4 @@
-import { redBeats, goldenBeats, playstation5, notebookAsus, beigeBeats, redClassicBeats, blackClassicBeats, smartwatch } from "../../data/ProductsCards";
+import { DataProducts } from "../../data/ProductsCards";
 import ProductCard from "./ProductCard";
 
 export default function Products() {
@@ -11,14 +11,17 @@ export default function Products() {
         There are many variations passages
       </h4>
       <div className="w-full h-[444px] grid grid-cols-4 items-center justify-items-center">
-        <ProductCard {...redBeats}/>
-        <ProductCard {...goldenBeats}/>
-        <ProductCard {...playstation5}/>
-        <ProductCard {...notebookAsus}/>
-        <ProductCard {...beigeBeats}/>
-        <ProductCard {...redClassicBeats}/>
-        <ProductCard {...blackClassicBeats}/>
-        <ProductCard {...smartwatch}/>
+        {DataProducts.map(product => (
+          <ProductCard 
+            key={product.id}
+            id={product.id}
+            imageUrl={product.imageUrl}
+            imageAlt={product.imageAlt}
+            imageTitle={product.imageTitle}
+            productName={product.productName}
+            productPrice={product.productPrice}
+          />
+        ))}
       </div>
     </div>
   );

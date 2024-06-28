@@ -1,7 +1,9 @@
 import { INewsCard } from "../../interfaces";
+import { v4 as uuidV4 } from 'uuid';
 
-export const news1: INewsCard[] = [
+export const DataNews: INewsCard[] = [
   {
+    id: uuidV4(),
     imageUrl: "images/news-person-smartwatch.png",
     imageAlt: "Imagem de uma pessoa vendo o smartwatch no pulso dela",
     imageTitle: "Como escolher os melhores gadgets",
@@ -10,6 +12,7 @@ export const news1: INewsCard[] = [
     postDate: new Date("2019-10-05T12:23")
   },
   {
+    id: uuidV4(),
     imageUrl: "images/news-notebook.png",
     imageAlt: "Imagem de uma pessoa mexendo em um notebook e um celular que estão sobre a mesa",
     imageTitle: "Como escolher os melhores gadgets",
@@ -18,6 +21,7 @@ export const news1: INewsCard[] = [
     postDate: new Date("2019-10-05T12:23")
   },
   {
+    id: uuidV4(),
     imageUrl: "images/news-vr.png",
     imageAlt: "Imagem de uma pessoa usando um óculos de realidade virtual e mexendo em alguma coisa com as mãos dentro dessa realidade",
     imageTitle: "Como escolher os melhores gadgets",

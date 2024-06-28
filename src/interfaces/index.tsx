@@ -33,6 +33,7 @@ export interface ISectionCard {
 }
 
 export interface IProductCard {
+  id: string,
   imageUrl: string,
   imageAlt?: string,
   imageTitle?: string,
@@ -42,6 +43,7 @@ export interface IProductCard {
 }
 
 export interface INewsCard {
+  id: string,
   imageUrl: string,
   imageAlt?: string,
   imageTitle?: string,
