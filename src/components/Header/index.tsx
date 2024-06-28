@@ -64,12 +64,14 @@ export default function Header(){
           title="Lupa" 
           alt="lupa para pesquisa" 
           className="cursor-pointer"
+          width="w-6"
         />
         <Picture 
           src="icons/shop-bag.png" 
           title="Minhas Compras" 
           alt="imagem de sacola representando as compras salvas do usuário" 
           className="cursor-pointer"
+          width="w-6"
         />
       </div>
     </header>

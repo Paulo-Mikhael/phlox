@@ -16,7 +16,7 @@ export default function Picture({ src, alt, title, loading, className, descripti
         alt={`${alt ? alt : src}`} 
         title={`${title ? title : src}`} 
         loading={loading ? loading : "lazy"}
-        className={`${className} ${width ? width : 'w-6'}`}
+        className={`${className} ${width ? width : 'w-20'}`}
       />
       {description && <figcaption>{description}</figcaption> }
     </figure>
