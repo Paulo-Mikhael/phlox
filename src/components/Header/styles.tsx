@@ -14,19 +14,6 @@ const twNavClasses: string[] = [
 ]
 export const twNavStyles = twNavClasses.join(" ");
 
-const twNavItemSelectedClasses: string[] = [
-  "font-medium",
-  "cursor-pointer"
-]
-export const twNavItemSelectedStyles = twNavItemSelectedClasses.join(" ");
-
-const twNavItemClasses: string[] = [
-  "italic",
-  "text-gray-800",
-  "cursor-pointer"
-]
-export const twNavItemStyles = twNavItemClasses.join(" ");
-
 const twHeaderIconsClasses: string[] = [
   "flex",
   "gap-8",

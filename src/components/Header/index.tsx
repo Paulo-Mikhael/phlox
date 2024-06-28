@@ -1,13 +1,38 @@
+import { useState } from "react";
 import Picture from "../Picture";
 import { 
   twHeaderIconsStyles, 
   twHeaderStyles, 
-  twNavItemSelectedStyles, 
-  twNavItemStyles, 
   twNavStyles 
 } from "./styles";
+import styled from "styled-components";
 
 export default function Header(){
+  const StyledH2 = styled.h2<{ selected: boolean }>`
+    font-style: ${props => props.selected === true ? "normal" : "italic"};
+    color: #1f2937;
+    cursor: pointer;
+    font-weight: ${props => props.selected === true ? 700 : "normal"};
+  `
+  const navItems: { itemName: string }[] = [
+    {
+      itemName: "Home"
+    },
+    {
+      itemName: "Shop"
+    },
+    {
+      itemName: "About Us"
+    },
+    {
+      itemName: "Blog"
+    },
+    {
+      itemName: "Contact Us"
+    }
+  ]
+  const [selected, setSelected] = useState<string>(navItems[0].itemName);
+
   return (
     <header className={twHeaderStyles}>
       <nav className={twNavStyles}>
@@ -18,21 +43,16 @@ export default function Header(){
           width="w-36"
           className="h-5 cursor-pointer"
         />
-        <h2 className={twNavItemSelectedStyles}>
-          Home
-        </h2>
-        <h2 className={twNavItemStyles}>
-          Shop
-        </h2>
-        <h2 className={twNavItemStyles}>
-          About us
-        </h2>
-        <h2 className={twNavItemStyles}>
-          Blog
-        </h2>
-        <h2 className={twNavItemStyles}>
-          Contact Us
-        </h2>
+        {navItems.map(item => (
+          <StyledH2 
+            selected={selected === item.itemName}
+            onClick={() => {
+              setSelected(item.itemName);
+            }}
+          >
+            {item.itemName}
+          </StyledH2>
+        ))}
       </nav>
       <div className={twHeaderIconsStyles}>
         <p className="cursor-pointer font-bold">
@@ -42,13 +62,13 @@ export default function Header(){
           src="icons/lupa.png" 
           title="lupa" 
           alt="lupa para pesquisa" 
-          className="h-6 cursor-pointer"
+          className="cursor-pointer"
         />
         <Picture 
           src="icons/shop-bag.png" 
           title="Minhas Compras" 
           alt="imagem de sacola representando as compras salvas do usuário" 
-          className="h-6 cursor-pointer"
+          className="cursor-pointer"
         />
       </div>
     </header>
