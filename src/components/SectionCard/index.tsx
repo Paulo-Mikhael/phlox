@@ -1,24 +1,14 @@
 import styled from "styled-components";
 import Button from "../Button";
 import Picture from "../Picture";
-
-interface Props {
-  backgroundColor: string,
-  backgroundBlurColor: string,
-  imageUrl: string,
-  firstColumnSubtitleUp: string
-  firstColumnSubtitleDown: string,
-  firstColumnMainWordUp: string,
-  firstColumnMainWordDown: string,
-  secondColumnSubtitleUp: string
-  secondColumnSubtitleDown: string,
-  secondColumnTitle: string
-}
+import { ISectionCard } from "../../interfaces";
 
 export default function SectionCard({
     backgroundBlurColor,
     backgroundColor,
     imageUrl,
+    imageAlt,
+    imageTitle,
     firstColumnSubtitleDown,
     firstColumnSubtitleUp,
     firstColumnMainWordUp,
@@ -26,7 +16,7 @@ export default function SectionCard({
     secondColumnSubtitleDown,
     secondColumnSubtitleUp,
     secondColumnTitle
-  }: Props) {
+  }: ISectionCard) {
   const StyledDiv = styled.div`
     width: 350px;
     height: 100%;
@@ -79,6 +69,8 @@ export default function SectionCard({
         width="w-96"
         src={imageUrl}
         className="absolute z-10 -top-20 left-[19rem]"
+        alt={imageAlt ? imageAlt : imageUrl}
+        title={imageTitle ? imageTitle : imageUrl}
       />
       <article className="w-full h-full flex justify-between">
         <StyledDiv>

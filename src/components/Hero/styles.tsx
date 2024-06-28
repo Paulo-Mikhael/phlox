@@ -1,6 +1,6 @@
 const twHomeContainerClasses: string[] = [
   "w-full",
-  "h-home",
+  "h-[33pc]",
   "bg-gradient-to-r",
   "from-gray-gradient-1",
   "to-80%",

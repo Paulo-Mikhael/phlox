@@ -10,9 +10,6 @@ export default {
         "header-nav": "50pc",
         "big-card": "514px"
       },
-      height: {
-        "home": "33pc"
-      },
       colors: {
         "gray-gradient-1": "#DCDCDC",
         "gray-gradient-2": "#EEEEEE",

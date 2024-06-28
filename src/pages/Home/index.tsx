@@ -2,8 +2,9 @@ import BenefitsLine from "../../components/BenefitsLine";
 import MainCard from "../../components/MainCard";
 import Header from "../../components/Header";
 import Hero from "../../components/Hero";
-import { IMainCard } from "../../interfaces";
+import { IMainCard, ISectionCard } from "../../interfaces";
 import SectionCard from "../../components/SectionCard";
+import Products from "../../components/Products";
 
 export default function Home() {
   const earphone: IMainCard = {
@@ -82,6 +83,20 @@ export default function Home() {
     bigCard: true,
     customImageStyles: "top-20"
   }
+  const sectionHeadphone: ISectionCard = {
+    backgroundColor:"bg-red-main",
+    backgroundBlurColor:"bg-[#F0454E]",
+    firstColumnSubtitleUp:"20% OFF",
+    firstColumnSubtitleDown:"15 Nov To 7 Dec",
+    firstColumnMainWordUp:"FINE",
+    firstColumnMainWordDown:"SMILE",
+    imageUrl:"images/card-section-headphone.png",
+    imageAlt: "desenho de headphone",
+    imageTitle: "Headphone",
+    secondColumnTitle:"Summer Sale",
+    secondColumnSubtitleUp:"Beats Solo Air",
+    secondColumnSubtitleDown:"Company that’s grow from 270 to 480 employees at the last 12 months"
+  }
   return (
     <section className="p-8">
       <Header />
@@ -95,18 +110,8 @@ export default function Home() {
         <MainCard {...amazon} />
       </main>
       <BenefitsLine />
-      <SectionCard 
-        backgroundColor="bg-red-main"
-        backgroundBlurColor="bg-[#F0454E]"
-        firstColumnSubtitleUp="20% OFF"
-        firstColumnSubtitleDown="15 Nov To 7 Dec"
-        firstColumnMainWordUp="FINE"
-        firstColumnMainWordDown="SMILE"
-        imageUrl="images/card-section-headphone.png"
-        secondColumnTitle="Summer Sale"
-        secondColumnSubtitleUp="Beats Solo Air"
-        secondColumnSubtitleDown="Company that’s grow from 270 to 480 employees at the last 12 months"
-      />
+      <SectionCard {...sectionHeadphone}/>
+      <Products />
     </section>
   );
 }
