@@ -7,13 +7,13 @@ import {
 } from "./styles";
 import styled from "styled-components";
 
+const StyledH2 = styled.h2<{ selected: boolean }>`
+  font-style: ${props => props.selected === true ? "normal" : "italic"};
+  color: #1f2937;
+  cursor: pointer;
+  font-weight: ${props => props.selected === true ? 700 : "normal"};
+`
 export default function Header(){
-  const StyledH2 = styled.h2<{ selected: boolean }>`
-    font-style: ${props => props.selected === true ? "normal" : "italic"};
-    color: #1f2937;
-    cursor: pointer;
-    font-weight: ${props => props.selected === true ? 700 : "normal"};
-  `
   const navItems: { itemName: string }[] = [
     {
       itemName: "Home"
@@ -43,8 +43,9 @@ export default function Header(){
           width="w-36"
           className="h-5 cursor-pointer"
         />
-        {navItems.map(item => (
+        {navItems.map((item, index) => (
           <StyledH2 
+            key={index}
             selected={selected === item.itemName}
             onClick={() => {
               setSelected(item.itemName);
@@ -60,7 +61,7 @@ export default function Header(){
         </p>
         <Picture 
           src="icons/lupa.png" 
-          title="lupa" 
+          title="Lupa" 
           alt="lupa para pesquisa" 
           className="cursor-pointer"
         />

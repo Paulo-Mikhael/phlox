@@ -1,23 +1,23 @@
 import styled from "styled-components";
 import Picture from "../Picture";
 
-export default function BenefitsLine(){
-  const StyledP = styled.p`
-    font-weight: bold;
-    font-size: 18px;
+const StyledP = styled.p`
+  font-weight: bold;
+  font-size: 18px;
 
-    b{
-      font-size: 15px;
-      color: #ccc;
-      font-weight: 700;
-    }
-    `
-  const StyledDiv = styled.div`
-    height: 50px;
-    display: flex;
-    align-items: end;
-    gap: 10px;
+  b{
+    font-size: 15px;
+    color: #ccc;
+    font-weight: 700;
+  }
   `
+const StyledDiv = styled.div`
+  height: 50px;
+  display: flex;
+  align-items: end;
+  gap: 10px;
+`
+export default function BenefitsLine(){
 
   return (
     <div className="h-24 flex items-center justify-center gap-[80px]">

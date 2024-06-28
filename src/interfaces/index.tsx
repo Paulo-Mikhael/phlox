@@ -28,7 +28,8 @@ export interface ISectionCard {
   firstColumnMainWordDown: string,
   secondColumnSubtitleUp: string
   secondColumnSubtitleDown: string,
-  secondColumnTitle: string
+  secondColumnTitle: string,
+  buttonTextColor: string
 }
 
 export interface IProductCard {
@@ -38,4 +39,13 @@ export interface IProductCard {
   productName: string,
   productPrice: string,
   coin?: string
+}
+
+export interface INewsCard {
+  imageUrl: string,
+  imageAlt?: string,
+  imageTitle?: string,
+  postDate: Date,
+  postTitle: string,
+  postText: string
 }
