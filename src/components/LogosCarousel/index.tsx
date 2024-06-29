@@ -1,11 +1,13 @@
+import { useState } from "react";
 import styled from "styled-components";
 
-const StyledDiv = styled.div`
+const StyledDiv = styled.div<{ $hovered: boolean }>`
     @keyframes scroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(calc(-250px * 4.6))}
   }
   animation: scroll 8s linear infinite;
+  animation-play-state: ${props => props.$hovered === true ? "paused" : ""};
   display: flex;
   gap: 80px;
   margin-right: 52pc;
@@ -39,30 +41,29 @@ export default function LogosCarousel() {
       logoUrl: "icons/jk-logo.png"
     },
   ]
+  const [carouselHovered, setCarouselHovered] = useState<boolean>(false);
+
   return (
-    <div className="w-full h-[271px] bg-[#EEE] flex items-center my-8 overflow-hidden relative">
-      <StyledDiv className="">
-        {logos.map((logo, index) => (
-          <img
-            key={index}
-            src={logo.logoUrl}
-            alt={`Logo da empresa fictícia ${logo.name}`}
-            title={`Logo da empresa fictícia ${logo.name}`}
-            width="150px"
-          />
-        ))}
-      </StyledDiv>
-      <StyledDiv>
-        {logos.map((logo, index) => (
-          <img
-            key={index}
-            src={logo.logoUrl}
-            alt={`Logo da empresa fictícia ${logo.name}`}
-            title={`Logo da empresa fictícia ${logo.name}`}
-            width="150px"
-          />
-        ))}
-      </StyledDiv>
+    <div className="w-full h-[271px] bg-[#EEE] flex items-center my-8 overflow-hidden relative cursor-pointer"
+      onMouseOver={(() => setCarouselHovered(true))}
+      onMouseLeave={(() => setCarouselHovered(false))}
+    >
+      {[1, 2].map((_, index) => (
+        <StyledDiv
+          key={index}
+          $hovered={carouselHovered}
+        >
+          {logos.map((logo, logoIndex) => (
+            <img
+              key={logoIndex}
+              src={logo.logoUrl}
+              alt={`Logo da empresa fictícia ${logo.name}`}
+              title={`Logo da empresa fictícia ${logo.name}`}
+              width="150px"
+            />
+          ))}
+        </StyledDiv>
+      ))}
       <DropShadow />
       <DropShadow className="right-0 rotate-180" />
     </div>

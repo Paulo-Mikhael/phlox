@@ -6,6 +6,7 @@ import {
   twNavStyles 
 } from "./styles";
 import styled from "styled-components";
+import { navItems } from "../../data/NavItems";
 
 const StyledH2 = styled.h2<{ selected: boolean }>`
   font-style: ${props => props.selected === true ? "normal" : "italic"};
@@ -14,23 +15,6 @@ const StyledH2 = styled.h2<{ selected: boolean }>`
   font-weight: ${props => props.selected === true ? 700 : "normal"};
 `
 export default function Header(){
-  const navItems: { itemName: string }[] = [
-    {
-      itemName: "Home"
-    },
-    {
-      itemName: "Shop"
-    },
-    {
-      itemName: "About Us"
-    },
-    {
-      itemName: "Blog"
-    },
-    {
-      itemName: "Contact Us"
-    }
-  ]
   const [selected, setSelected] = useState<string>(navItems[0].itemName);
 
   return (

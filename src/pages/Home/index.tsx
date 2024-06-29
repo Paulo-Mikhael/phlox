@@ -8,6 +8,7 @@ import News from "../../components/News";
 import { earphone, gadgets, notebook, oculus, amazon, console } from "../../data/MainCards";
 import { sectionHeadphone, sectionSmartwatch } from "../../data/SectionCards";
 import LogosCarousel from "../../components/LogosCarousel";
+import Footer from "../../components/Footer";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
         <News />
       </section>
       <LogosCarousel />
+      <Footer />
     </>
   );
 }

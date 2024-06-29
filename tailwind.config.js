@@ -31,6 +31,9 @@ export default {
       fontSize: {
         "3xl": "3rem",
         "4xl": "10rem"
+      },
+      boxShadow: {
+        'button': "0px 0px 15px #FB2A36"
       }
     },
   },
