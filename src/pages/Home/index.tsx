@@ -9,6 +9,14 @@ import { earphone, gadgets, notebook, oculus, amazon, console } from "../../data
 import { sectionHeadphone, sectionSmartwatch } from "../../data/SectionCards";
 import LogosCarousel from "../../components/LogosCarousel";
 import Footer from "../../components/Footer";
+import styled from "styled-components";
+
+const StyledDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  width: 100%;
+`
 
 export default function Home() {
   return (
@@ -16,13 +24,17 @@ export default function Home() {
       <section className="p-8">
         <Header />
         <Hero />
-        <main className="my-8 flex flex-wrap gap-8 justify-center">
-          <MainCard {...earphone} />
-          <MainCard {...gadgets} />
-          <MainCard {...notebook} />
-          <MainCard {...console} />
-          <MainCard {...oculus} />
-          <MainCard {...amazon} />
+        <main className="w-full my-8 flex flex-col gap-8 justify-center">
+          <StyledDiv>
+            <MainCard {...earphone} />
+            <MainCard {...gadgets} />
+            <MainCard {...notebook} />
+          </StyledDiv>
+          <StyledDiv>
+            <MainCard {...console} />
+            <MainCard {...oculus} />
+            <MainCard {...amazon} />
+          </StyledDiv>
         </main>
         <BenefitsLine />
         <SectionCard {...sectionHeadphone} />

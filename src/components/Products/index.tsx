@@ -10,7 +10,7 @@ export default function Products() {
       <h4 className="text-[20px] mb-[25px]">
         There are many variations passages
       </h4>
-      <div className="w-full h-[444px] grid grid-cols-4 items-center justify-items-center">
+      <div className="w-[1270px] h-[444px] grid grid-cols-4 items-center justify-items-center">
         {DataProducts.map(product => (
           <ProductCard 
             key={product.id}
