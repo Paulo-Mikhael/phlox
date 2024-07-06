@@ -8,7 +8,8 @@ export const earphone: IMainCard = {
   subtitleP: "Enjoy",
   boldSubtitleP: "With",
   mainP: "EARPHONE",
-  mainPColor: "text-earphone-text"
+  mainPColor: "text-earphone-text",
+  customImageStyles: "max-xl:-top-24"
 }
 export const gadgets: IMainCard = {
   cardBackground: "bg-gadgets-background",
@@ -60,7 +61,7 @@ export const notebook: IMainCard = {
   whiteButton: true,
   bigCard: true,
   whiteButtonTextColor: "text-notebook-background",
-  customImageStyles: "h-full w-60"
+  customImageStyles: "h-full w-60 max-xl:h-56"
 }
 export const console: IMainCard = {
   cardBackground: "bg-console-background",
@@ -74,5 +75,5 @@ export const console: IMainCard = {
   mainP: "CONSOLES",
   mainPColor: "text-console-text",
   bigCard: true,
-  customImageStyles: "top-20"
+  customImageStyles: "top-20 max-xl:-top-24"
 }

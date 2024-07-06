@@ -2,7 +2,7 @@
 [![PHLOX Main Page Screenshot](public/images/phlox-home.png)](https://phlox-psi.vercel.app/)
 
 ## Sobre ✏️
-  ### A PHLOX é um e-commerce que vende os mais diversos acessórios do mundo moderno, desde de simples cabos auxiliares, até consoles de útima geração.
+  ### A PHLOX é um e-commerce que vende os mais diversos acessórios do mundo moderno, desde de simples cabos auxiliares, até consoles de útima geração. Projeto feito em React
 
 ## Estado do projeto 🚧
     Completo ✔️ => Landing page principal da loja (Home), onde os clientes tem o primeiro contato com a loja on-line.
@@ -24,6 +24,10 @@
     <abbr title="Tailwind CSS">
       <img src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4.svg?style=for-the-badge&logo=Tailwind-CSS&logoColor=white"/>
     </abbr>
+    <abbr title="React Router Dom">
+      <img src="https://img.shields.io/badge/React%20Router-CA4245.svg?style=for-the-badge&logo=React-Router&logoColor=white"/>
+    </abbr>
+  </div>
 
 ## Rodando Localmente (Prompt)
 ### Clone o projeto

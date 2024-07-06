@@ -34,13 +34,14 @@ export default function Header(){
             onClick={() => {
               setSelected(item.itemName);
             }}
+            className="max-xl:hidden"
           >
             {item.itemName}
           </StyledH2>
         ))}
       </nav>
       <div className={twHeaderIconsStyles}>
-        <p className="cursor-pointer font-bold">
+        <p className="cursor-pointer font-bold max-xl:hidden">
           login
         </p>
         <Picture 
@@ -48,14 +49,21 @@ export default function Header(){
           title="Lupa" 
           alt="lupa para pesquisa" 
           className="cursor-pointer"
+          width="w-6 max-sm:w-12"
+        />
+        <Picture 
+          src="icons/cart.png" 
+          title="Minhas Compras" 
+          alt="imagem de sacola representando as compras salvas do usuário" 
+          className="cursor-pointer max-xl:hidden"
           width="w-6"
         />
         <Picture 
-          src="icons/shop-bag.png" 
-          title="Minhas Compras" 
+          src="icons/mobile-menu.png" 
+          title="Menu" 
           alt="imagem de sacola representando as compras salvas do usuário" 
-          className="cursor-pointer"
-          width="w-6"
+          className="cursor-pointer xl:hidden"
+          width="w-6 max-sm:w-12"
         />
       </div>
     </header>

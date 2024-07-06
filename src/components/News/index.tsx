@@ -7,6 +7,7 @@ const StyledDiv = styled.div`
   flex-direction: column;
   gap: 12px;
   width: 381px;
+  margin-bottom: 50px;
   
   img{
     width: 100%;
@@ -23,6 +24,10 @@ const StyledDiv = styled.div`
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
+  @media screen and (max-width:860px){
+    width: 100%;
+  }
 `
 export default function News() {
 
@@ -34,7 +39,7 @@ export default function News() {
       <h4 className="text-[20px] mb-[25px]">
         There are many variations passages
       </h4>
-      <div className="w-full flex justify-evenly">
+      <div className="w-full flex justify-evenly flex-wrap overflow-y-scroll">
         {DataNews.map(newsItem => (
           <StyledDiv key={newsItem.id}>
             <Picture

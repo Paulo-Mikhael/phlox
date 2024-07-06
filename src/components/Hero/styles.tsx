@@ -19,6 +19,7 @@ const twMainHomeContentClasses: string[] = [
   "w-11/12",
   "flex",
   "flex-col",
+  "max-sm:ml-5"
 ]
 export const twMainHomeContentStyles = twMainHomeContentClasses.join(" ");
 
@@ -27,6 +28,8 @@ const twMainHomeTextClasses: string[] = [
   "font-bold",
   "text-4xl",
   "absolute",
-  "z-10"
+  "z-10",
+  "max-xl:text-[100px]",
+  "max-lg:text-[55px]"
 ]
 export const twMainHomeTextStyles = twMainHomeTextClasses.join(" ");

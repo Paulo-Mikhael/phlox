@@ -17,7 +17,7 @@ export default function Hero(){
       <p className={`${twPBoldSubtitleStyles} absolute top-[11pc] z-10`}>
         Wireless
       </p>
-      <p className={`${twMainHomeTextStyles} top-[11pc] left-[4.5pc]`}>
+      <p className={`${twMainHomeTextStyles} top-[11pc] max-xl:top-[14pc] max-sm:top-[14pc] left-[5pc] max-sm:left-[1pc]`}>
         HEADPHONES
       </p>
       <Picture
@@ -25,7 +25,7 @@ export default function Hero(){
         title="Headphone"
         alt="Desenho de um headphone"
         width="w-80"
-        className="absolute right-56 z-0 top-[4pc]"
+        className="absolute right-56 z-0 top-[4pc] max-lg:right-5"
       />
       <div className="mb-10">
         <Button width="w-48">

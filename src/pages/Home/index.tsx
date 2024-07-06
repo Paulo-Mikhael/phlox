@@ -16,6 +16,10 @@ const StyledDiv = styled.div`
   justify-content: center;
   gap: 32px;
   width: 100%;
+
+  @media screen and (max-width: 1280px){
+    flex-direction: column;
+  }
 `
 
 export default function Home() {

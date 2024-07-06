@@ -2,46 +2,56 @@ import { IMainCard } from "../../interfaces";
 import { twPBoldSubtitleStyles, twPSubtitleStyles } from "../../util";
 import Button from "../Button";
 import Picture from "../Picture";
-import { 
-  twCardContainerStyles, 
-  twCardContentStyles, 
-  twCardImageStyles, 
-  twCardMainPStyles 
+import {
+  twCardContainerStyles,
+  twCardContentStyles,
+  twCardImageStyles,
+  twCardMainPStyles
 } from "./styles";
 
-export default function MainCard({ 
-  cardBackground, imageSrc, imageAlt, imageTitle, subtitleP, boldSubtitleP, mainP, subtitlePColor, 
+export default function MainCard({
+  cardBackground, imageSrc, imageAlt, imageTitle, subtitleP, boldSubtitleP, mainP, subtitlePColor,
   boldSubtitlePColor, mainPColor, whiteButton = false, bigCard, whiteButtonTextColor, customImageStyles, customImageWidth
-}: IMainCard){
+}: IMainCard) {
+  const subtitleColor = subtitlePColor ? subtitlePColor : "text-white";
+  const boldSubtitleColor = boldSubtitlePColor ? boldSubtitlePColor : "text-white";
+
   return (
     <div className={`${twCardContainerStyles} ${cardBackground} ${bigCard === true ? "w-big-card" : "w-80"}`}>
-      <Picture 
+      <Picture
         className={`
           ${twCardImageStyles} 
           ${bigCard === true ? "right-5 top-0" : "right-0 bottom-0"} 
           ${customImageStyles}
-        `} 
+        `}
         width={customImageWidth ? customImageWidth : "w-52"}
-        src={imageSrc} 
+        src={imageSrc}
         alt={imageAlt ? imageAlt : undefined}
         title={imageTitle ? imageTitle : undefined}
       />
       <div className={twCardContentStyles}>
-        <p className={`${twPSubtitleStyles} ${subtitlePColor ? subtitlePColor : "text-white"}`}>
-          {subtitleP}
+        <p className="xl:hidden flex gap-2 text-[20px] font-bold z-10">
+          <span className={subtitleColor}>{subtitleP}</span> 
+          <span className={boldSubtitleColor}>{boldSubtitleP}</span> 
+          <span className={mainPColor}>{mainP}</span>
         </p>
-        <p className={`${twPBoldSubtitleStyles} ${boldSubtitlePColor ? boldSubtitlePColor : "text-white"}`}>
-          {boldSubtitleP}
-        </p>
-        <p className={`${twCardMainPStyles} ${mainPColor}`}>
-          {mainP}
-        </p>
-        <Button 
-          width="w-24" 
-          padding="p-2" 
+        <div className="z-10 max-xl:hidden">
+          <p className={`${twPSubtitleStyles} ${subtitleColor}`}>
+            {subtitleP}
+          </p>
+          <p className={`${twPBoldSubtitleStyles} ${boldSubtitleColor}`}>
+            {boldSubtitleP}
+          </p>
+          <p className={`${twCardMainPStyles} ${mainPColor}`}>
+            {mainP}
+          </p>
+        </div>
+        <Button
+          width="w-24"
+          padding="p-2"
           color={`${whiteButton === true ? whiteButtonTextColor : "text-white"}`}
           className=
-            {`z-10 ${whiteButton === true ? `bg-white hover:bg-slate-200` : ""}`}
+          {`z-10 ${whiteButton === true ? `bg-white hover:bg-slate-200` : ""}`}
         >
           See More
         </Button>
