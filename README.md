@@ -2,7 +2,7 @@
 [![PHLOX Main Page Screenshot](public/images/phlox-home.png)](https://phlox-psi.vercel.app/)
 
 ## Sobre ✏️
-  ### A PHLOX é um e-commerce que vende os mais diversos acessórios do mundo moderno, desde de simples cabos auxiliares, até consoles de útima geração. Projeto feito em React
+  ### A PHLOX é um e-commerce que vende os mais diversos acessórios do mundo moderno, desde de simples cabos auxiliares, até consoles de útima geração. O projeto irá ter 5 páginas + um blog totalmente funcional que irá se conectar a loja por uma api. Os vários blocos com cores chamativas e design minimalista da loja, ajudam na retenção do usuário, gerando talvez um futuro cliente.
 
 ## Estado do projeto 🚧
     Completo ✔️ => Landing page principal da loja (Home), onde os clientes tem o primeiro contato com a loja on-line.
@@ -36,7 +36,7 @@
 ```
 ### Entre no diretório do projeto
 ```bash
-  cd my-project
+  cd phlox
 ```
 ### Instale as dependências
 ```bash
