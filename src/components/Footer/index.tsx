@@ -31,11 +31,32 @@ const FooterContent = styled.div`
 `
 const AboutUs = styled.article`
   width: 359px;
+  
+  .logo{
+    width: 180px;
+  }
+  @media screen and (max-width: 900px){
+    width: 200px;
+    p{
+      font-size: 18px;
+    }
+    .logo{
+      width: 100px;
+    }
+  }
+  @media screen and (max-width: 650px){
+    display: none;
+  }
 `
 const Contact = styled.article`
   width: 265px;
+
+  @media screen and (max-width: 900px){
+    margin-top: 10px;
+    width: 323px;
+  }
 `
-const ContactIcons = styled.article`
+const ContactIcons = styled.article<{ $hide?: boolean }>`
   display: flex;
   gap: 16px;
   align-items: end;
@@ -44,26 +65,84 @@ const ContactIcons = styled.article`
   img{
     cursor: pointer;
   }
+  @media (min-width: 651px) {
+    display: ${props => props.$hide === true ? 'none' : ''};
+  }
 `
 const Links = styled.article`
-  width: 114px;
+  @media screen and (max-width: 900px){
+    ul{
+      display: flex;
+      gap: 10px;
+
+      @media screen and (max-width: 640px){
+        display: block;
+      }
+    }
+  }
 `
 const Subscribe = styled.article`
   width: 344px;
-
+  
   @media screen and (min-width: 1536px){
     width: 544px;
+  }
+  @media screen and (max-width: 1280px){
+    margin-bottom: 4rem;
+    width: 100%;
+
+    h3, h4{
+      font-weight: bold;
+      margin-bottom: 25px;
+      width: 100%;
+      text-align: center;
+    }
+    h3{
+      font-size: 25px;
+    }
+    h4{
+      font-size: 29px;
+    }
+  }
+`
+const StyledDiv = styled.div`
+  width: 27rem;
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: 900px){
+    flex-direction: column;
+    justify-content: right;
+    align-items: end;
+    p{
+      font-size: 16px;
+    }
+    .logo{
+      width: 100px;
+    }
+  }
+  @media screen and (max-width: 651px){
+    align-items: start;
   }
 `
 
 export default function Footer() {
   return (
-    <footer className="w-full h-80 py-10 px-20">
+    <footer className="w-full h-80 max-xl:h-[23rem] py-10 px-20 max-mobile:hidden">
+      <Subscribe className="xl:hidden">
+        <h3>
+          Subscribe To Our Email
+        </h3>
+        <h4>
+          For Latest News & Updates
+        </h4>
+        <SubscribeInput />
+      </Subscribe>
       <FooterContent>
         <AboutUs>
           <Picture
             src="icons/logo.png"
-            width="w-[180px]"
+            className="logo"
           />
           <p>
             When, while the lovely vallery teems with vapour
@@ -88,37 +167,57 @@ export default function Footer() {
             />
           </ContactIcons>
         </AboutUs>
-        <Links>
-          <h3>
-            Quick Links
-          </h3>
-          <ul>
-            {navItems.map(item => (
-              <li>
-                <a
-                  className="cursor-pointer"
-                  onClick={() => {
-                    item.itemName === "Home" && scrollTo({
-                      top: 0,
-                      behavior: "smooth"
-                    })
-                  }}
-                >
-                  {item.itemName}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </Links>
-        <Contact>
-          <h3>
-            Contact
-          </h3>
-          <p>
-            +55 (11) 00000-0000 São Paulo, SP 501 Avenida Paulista
-          </p>
-        </Contact>
-        <Subscribe>
+        <StyledDiv>
+          <Links>
+            <h3>
+              Quick Links
+            </h3>
+            <ul>
+              {navItems.map((item, index) => (
+                <li key={index}>
+                  <a
+                    className="cursor-pointer"
+                    onClick={() => {
+                      item.itemName === "Home" && scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                      })
+                    }}
+                  >
+                    {item.itemName}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </Links>
+          <Contact>
+            <h3>
+              Contact
+            </h3>
+            <p>
+              +55 (11) 00000-0000 São Paulo, SP 501 Avenida Paulista
+            </p>
+          </Contact>
+          <ContactIcons $hide={true}>
+            <Picture
+              src="icons/instagram.png"
+              width="w-[25px]"
+            />
+            <Picture
+              src="icons/linkedin.png"
+              width="w-[25px]"
+            />
+            <Picture
+              src="icons/facebook.png"
+              width="w-[14px]"
+            />
+            <Picture
+              src="icons/twiter.png"
+              width="w-[25px]"
+            />
+          </ContactIcons>
+        </StyledDiv>
+        <Subscribe className="max-xl:hidden">
           <h3>
             Subscribe To Our Email
           </h3>

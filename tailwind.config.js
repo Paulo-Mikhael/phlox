@@ -34,6 +34,9 @@ export default {
       },
       boxShadow: {
         'button': "0px 0px 15px #FB2A36"
+      },
+      screens: {
+        'mobile': '400px'
       }
     },
   },

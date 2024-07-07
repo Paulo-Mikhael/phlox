@@ -10,7 +10,8 @@ const twHomeContainerClasses: string[] = [
   "flex",
   "items-end",
   "justify-start",
-  "relative"
+  "relative",
+  "max-mobile:items-center"
 ]
 export const twHomeContainerStyles = twHomeContainerClasses.join(" ");
 
@@ -19,7 +20,7 @@ const twMainHomeContentClasses: string[] = [
   "w-11/12",
   "flex",
   "flex-col",
-  "max-sm:ml-5"
+  "max-sm:ml-5",
 ]
 export const twMainHomeContentStyles = twMainHomeContentClasses.join(" ");
 
@@ -30,6 +31,7 @@ const twMainHomeTextClasses: string[] = [
   "absolute",
   "z-10",
   "max-xl:text-[100px]",
-  "max-lg:text-[55px]"
+  "max-lg:text-[55px]",
+  "max-mobile:text-[40px]"
 ]
 export const twMainHomeTextStyles = twMainHomeTextClasses.join(" ");

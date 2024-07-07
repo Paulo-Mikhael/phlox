@@ -48,10 +48,10 @@ export default function MainCard({
         </div>
         <Button
           width="w-24"
-          padding="p-2"
+          padding="p-2 max-mobile:px-[0px]"
           color={`${whiteButton === true ? whiteButtonTextColor : "text-white"}`}
           className=
-          {`z-10 ${whiteButton === true ? `bg-white hover:bg-slate-200` : ""}`}
+          {`z-10 ${whiteButton === true ? `bg-white hover:bg-slate-200` : ""} max-[450px]:hidden`}
         >
           See More
         </Button>
