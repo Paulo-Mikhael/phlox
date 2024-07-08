@@ -24,7 +24,7 @@ export default function Header(){
           src="icons/logo.png" 
           title="Logo PHLOX" 
           alt="logo da empresa" 
-          width="w-36"
+          width="w-36 max-mobile:w-30"
           className="h-5 cursor-pointer"
         />
         {navItems.map((item, index) => (
@@ -49,7 +49,7 @@ export default function Header(){
           title="Lupa" 
           alt="lupa para pesquisa" 
           className="cursor-pointer"
-          width="w-6 max-sm:w-12"
+          width="w-6"
         />
         <Picture 
           src="icons/cart.png" 
@@ -63,7 +63,7 @@ export default function Header(){
           title="Menu" 
           alt="imagem de sacola representando as compras salvas do usuário" 
           className="cursor-pointer xl:hidden"
-          width="w-6 max-sm:w-12"
+          width="w-6"
         />
       </div>
     </header>

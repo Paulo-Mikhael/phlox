@@ -55,6 +55,9 @@ border-radius: 9999px;
 @media screen and (max-width: 640px) {
   width: 300px;
 }
+@media screen and (max-width: 400px) {
+  width: 230px;
+}
 `
 const FilterBlur = styled.div`
 z-index: 1;

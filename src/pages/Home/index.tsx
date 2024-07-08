@@ -25,7 +25,7 @@ const StyledDiv = styled.div`
 export default function Home() {
   return (
     <>
-      <section className="p-8">
+      <section className="p-8 max-mobile:p-2">
         <Header />
         <Hero />
         <main className="w-full my-8 flex flex-col gap-8 justify-center">

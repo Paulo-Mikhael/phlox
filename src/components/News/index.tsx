@@ -39,7 +39,7 @@ export default function News() {
       <h4 className="text-[20px] mb-[25px]">
         There are many variations passages
       </h4>
-      <div className="w-full flex justify-evenly flex-wrap overflow-y-scroll">
+      <div className="w-full flex justify-evenly flex-wrap overflow-y-scroll max-mobile:p-2">
         {DataNews.map(newsItem => (
           <StyledDiv key={newsItem.id}>
             <Picture

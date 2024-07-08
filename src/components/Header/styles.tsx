@@ -2,7 +2,8 @@ const twHeaderClasses: string[] = [
   "w-full",
   "text-xl",
   "flex",
-  "justify-between"
+  "justify-between",
+  "max-mobile:p-2"
 ]
 export const twHeaderStyles = twHeaderClasses.join(" ");
 
@@ -11,6 +12,7 @@ const twNavClasses: string[] = [
   "justify-between",
   "items-center",
   "w-header-nav",
+  "max-xl:w-24"
 ]
 export const twNavStyles = twNavClasses.join(" ");
 

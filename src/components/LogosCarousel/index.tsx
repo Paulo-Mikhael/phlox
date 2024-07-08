@@ -44,7 +44,7 @@ export default function LogosCarousel() {
   const [carouselHovered, setCarouselHovered] = useState<boolean>(false);
 
   return (
-    <div className="w-full h-[271px] bg-[#EEE] flex items-center my-8 overflow-hidden relative cursor-pointer"
+    <div className="w-full h-[271px] bg-[#EEE] flex items-center my-8 overflow-hidden relative cursor-pointer max-mobile:hidden"
       onMouseOver={(() => setCarouselHovered(true))}
       onMouseLeave={(() => setCarouselHovered(false))}
     >
