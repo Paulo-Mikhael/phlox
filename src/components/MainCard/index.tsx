@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { IMainCard } from "../../interfaces";
 import { twPBoldSubtitleStyles, twPSubtitleStyles } from "../../util";
 import Button from "../Button";
@@ -15,9 +16,32 @@ export default function MainCard({
 }: IMainCard) {
   const subtitleColor = subtitlePColor ? subtitlePColor : "text-white";
   const boldSubtitleColor = boldSubtitlePColor ? boldSubtitlePColor : "text-white";
+  const component = useRef<HTMLDivElement | null>(null);
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  useEffect(() => {
+    if (scrollY >= 200){
+      component.current?.classList.add('animate-fadeQuick');
+      setTimeout(() => {
+        component.current?.classList.add('opacity-100');
+      }, 1000);
+    }
+  }, [scrollY]);
 
   return (
-    <div className={`${twCardContainerStyles} ${cardBackground} ${bigCard === true ? "w-big-card" : "w-80"}`}>
+    <div 
+      className={`${twCardContainerStyles} ${cardBackground} ${bigCard === true ? "w-big-card" : "w-80"} opacity-0`}
+      ref={component}
+    >
       <Picture
         className={`
           ${twCardImageStyles} 

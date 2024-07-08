@@ -128,7 +128,7 @@ const StyledDiv = styled.div`
 
 export default function Footer() {
   return (
-    <footer className="w-full h-80 max-xl:h-[23rem] py-10 px-20 max-mobile:p-2 max-mobile:mt-14">
+    <footer className="w-full h-80 max-xl:h-[23rem] py-10 px-20 max-xl:p-6 max-mobile:p-2 max-mobile:mt-14">
       <Subscribe className="xl:hidden">
         <h3>
           Subscribe To Our Email

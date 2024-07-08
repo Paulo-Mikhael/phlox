@@ -33,13 +33,13 @@ export default function News() {
 
   return (
     <div className="h-[551px] flex flex-col items-center">
-      <h3 className="text-[39px] font-bold">
+      <h3 className="text-[39px] font-bold text-center">
         Recent News
       </h3>
-      <h4 className="text-[20px] mb-[25px]">
+      <h4 className="text-[20px] mb-[25px] text-center">
         There are many variations passages
       </h4>
-      <div className="w-full flex justify-evenly flex-wrap overflow-y-scroll max-mobile:p-2">
+      <div className="w-full flex justify-evenly gap-5 flex-wrap overflow-hidden max-[1201px]:overflow-y-scroll max-mobile:p-2">
         {DataNews.map(newsItem => (
           <StyledDiv key={newsItem.id}>
             <Picture

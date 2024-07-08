@@ -5,7 +5,7 @@ import Hero from "../../components/Hero";
 import SectionCard from "../../components/SectionCard";
 import Products from "../../components/Products";
 import News from "../../components/News";
-import { earphone, gadgets, notebook, oculus, amazon, console } from "../../data/MainCards";
+import { earphone, gadgets, notebook, oculus, amazon, console as consoleData } from "../../data/MainCards";
 import { sectionHeadphone, sectionSmartwatch } from "../../data/SectionCards";
 import LogosCarousel from "../../components/LogosCarousel";
 import Footer from "../../components/Footer";
@@ -35,7 +35,7 @@ export default function Home() {
             <MainCard {...notebook} />
           </StyledDiv>
           <StyledDiv>
-            <MainCard {...console} />
+            <MainCard {...consoleData} />
             <MainCard {...oculus} />
             <MainCard {...amazon} />
           </StyledDiv>

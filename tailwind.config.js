@@ -37,6 +37,23 @@ export default {
       },
       screens: {
         'mobile': '400px'
+      },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        },
+        fade: {
+          '0%': { opacity: '0%' },
+          '100%': { opacity: '100%' },
+        }
+      },
+      animation: {
+        wiggle: 'wiggle 1s ease-in-out infinite',
+        fadeQuick: 'fade 1s ease-in-out',
+        fadeNormal: 'fade 2s ease-in-out',
+        fadeSlow: 'fade 3s ease-in-out',
+        fadeSlowest: 'fade 4s ease-in-out',
       }
     },
   },
