@@ -4,7 +4,7 @@ import Picture from "../../Picture";
 export default function ProductCard({ imageUrl, imageAlt, imageTitle, productName, productPrice, coin = "$" }: IProductCard) {
   return (
     <>
-      <article className="transition-all duration-700 w-[260px] h-[202px] flex flex-col gap-2 cursor-pointer hover:bg-slate-100 rounded-[25px] max-xl:hidden">
+      <article className="transition-all duration-700 w-[260px] h-[202px] flex flex-col gap-2 cursor-pointer hover:shadow-lg rounded-[25px] max-xl:hidden">
         <div className="w-full h-[134px] bg-[#DCDCDC] flex items-center justify-center rounded-[25px]">
           <Picture
             width="w-20"
@@ -22,6 +22,8 @@ export default function ProductCard({ imageUrl, imageAlt, imageTitle, productNam
           </p>
         </div>
       </article>
+
+      {/*Mobile*/}
       <article className="xl:hidden w-[300px] h-[330px] bg-[#DCDCDC] rounded-[25px] flex flex-col">
         <div className="w-full h-[204px] bg-[#DCDCDC] flex items-center justify-center rounded-[25px] mb-4">
           <Picture
