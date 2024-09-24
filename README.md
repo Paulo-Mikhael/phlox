@@ -24,9 +24,6 @@
     <abbr title="Tailwind CSS">
       <img src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4.svg?style=for-the-badge&logo=Tailwind-CSS&logoColor=white"/>
     </abbr>
-    <abbr title="React Router Dom">
-      <img src="https://img.shields.io/badge/React%20Router-CA4245.svg?style=for-the-badge&logo=React-Router&logoColor=white"/>
-    </abbr>
   </div>
 
 ## Rodando Localmente (Prompt)
